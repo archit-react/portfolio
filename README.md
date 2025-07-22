@@ -4,7 +4,7 @@ A modern, Gen Z-inspired front-end portfolio built with React, TypeScript, and T
 
 ## Live Hosting
 
-Live Portfolio: [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)
+Live Portfolio: [https://portfolio-archit-three.vercel.app/](https://portfolio-archit-three.vercel.app/)
 
 ## Features
 
