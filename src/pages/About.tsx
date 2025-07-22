@@ -11,7 +11,7 @@ export default function About() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center">About</h2>
       <p className="text-lg leading-relaxed text-center">
         Front-End Engineer with 1 year of experience crafting responsive,
         scalable web apps using React, TypeScript, and Tailwind CSS. Focused on
