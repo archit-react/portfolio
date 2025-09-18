@@ -12,8 +12,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    icon: "dashboard",
-    title: "Rev9 – Revenue Dashboard",
+    icon: "Rev9",
+    title: "Revenue Dashboard",
     description:
       "Full-stack MERN analytics app with charts, export, dark/light theme, and micro-animations. Built to be 2025-modern and recruiter-ready.",
     cta: { label: "View Project", href: "/rev9" },
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     ),
   },
   {
-    icon: "chat",
+    icon: "Bud8",
     title: "AI Chatbot",
     description:
       "Conversational assistant with context memory, typing indicators, and clean chat UI using React + Tailwind.",
@@ -61,7 +61,7 @@ function send(text: string) {
     ),
   },
   {
-    icon: "code",
+    icon: "Code₹",
     title: "AI Code Generator",
     description:
       "Prompt-to-component generator that outputs type-safe React + TS. Ships with copy and download actions.",

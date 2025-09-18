@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import EarthVector from "./EarthVector";
 
 type Star = { top: string; left: string; size: number; delay: string };
 
@@ -45,20 +44,36 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div className="grid gap-20 lg:gap-28 lg:grid-cols-2 items-center">
           {/* contact card */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-md shadow-2xl">
-            <p className="text-sm tracking-wider text-white/60">GET IN TOUCH</p>
+          <div
+            className="
+  relative
+  w-full
+  max-w-md
+  rounded-3xl
+  p-8
+  shadow-[0_8px_32px_rgba(0,0,0,0.45)]
+  border border-white/20
+  bg-white/10
+  backdrop-blur-2xl
+  before:absolute before:inset-0 before:rounded-3xl
+  before:bg-gradient-to-br before:from-white/30 before:to-white/5
+  before:opacity-20
+  before:pointer-events-none
+"
+          >
+            <p className="text-sm tracking-wider text-white/70">GET IN TOUCH</p>
             <h2 className="mt-2 text-4xl md:text-5xl font-extrabold text-white">
               Contact.
             </h2>
 
-            <div className="mt-8 space-y-6 text-white/90">
+            <div className="mt-8 space-y-6 text-white/90 relative z-10">
               <div>
                 <p className="text-lg font-semibold">
                   Contact me through my email
                 </p>
                 <a
                   href="mailto:therethough@gmail.com"
-                  className="underline underline-offset-4"
+                  className="underline underline-offset-4 hover:text-cyan-300 transition"
                 >
                   therethough@gmail.com
                 </a>
@@ -72,7 +87,7 @@ export default function Contact() {
                   <a
                     href="https://linkedin.com/in/archit-linked"
                     target="_blank"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md transition"
                     aria-label="LinkedIn"
                   >
                     <svg viewBox="0 0 24 24" className="h-5 w-5 fill-white/90">
@@ -82,7 +97,7 @@ export default function Contact() {
                   <a
                     href="https://github.com/architsharma9"
                     target="_blank"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md transition"
                     aria-label="GitHub"
                   >
                     <svg viewBox="0 0 24 24" className="h-5 w-5 fill-white/90">
@@ -99,7 +114,7 @@ export default function Contact() {
                 <p className="text-lg font-semibold mb-3">Download my resume</p>
                 <a
                   href="/resume.pdf"
-                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-green-600 via-blue-500 to-emerald-400 px-6 py-3 font-semibold text-white shadow-lg hover:brightness-110"
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg hover:brightness-110 transition"
                   download
                 >
                   Download Resume
@@ -109,7 +124,29 @@ export default function Contact() {
           </div>
 
           {/* Earth visual */}
-          <EarthVector />
+          <div className="relative mx-auto aspect-square w-80 sm:w-96 lg:w-[28rem]">
+            {/* Core gradient with breathing pulse */}
+            <div className="absolute inset-0 rounded-full animate-planet-pulse bg-[radial-gradient(circle_at_30%_30%,#3b82f6_0%,#10b981_35%,#065f46_60%,#1e3a8a_85%)]" />
+
+            {/* Cloud layer (drifting softly) */}
+            <div className="absolute inset-0 rounded-full bg-white/20 blur-xl animate-cloud-drift mix-blend-overlay" />
+
+            {/* Orbit bands (counter-rotate) */}
+            <div className="absolute inset-0 animate-orbit-slow">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute inset-0 rounded-full border border-white/20"
+                  style={{
+                    transform: `rotate(${i * 20}deg) skewY(${10 + i * 2}deg)`,
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Atmosphere glow (pulses) */}
+            <div className="absolute -inset-8 rounded-full bg-cyan-400/20 blur-3xl animate-glow-pulse" />
+          </div>
         </div>
       </div>
     </section>

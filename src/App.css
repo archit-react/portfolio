@@ -10,7 +10,6 @@ html {
 }
 
 #root {
-  /* Full width, no unwanted margins */
   margin: 0;
   padding: 0;
   max-width: none;
@@ -19,8 +18,8 @@ html {
 
 /* Better text selection */
 ::selection {
-  background: rgba(253, 224, 71, 0.45); /* yellow-300-ish */
-  color: #111827; /* gray-900 */
+  background: rgba(253, 224, 71, 0.45);
+  color: #111827;
 }
 
 /* Media defaults */
@@ -45,19 +44,24 @@ canvas {
 
 /* ---------------------------
    Space / stars animations
-   (used by Contact.tsx)
+   (used by Contact + Earth)
 ---------------------------- */
 
-/* star twinkle */
+/* Star twinkle */
 @keyframes star-twinkle {
-  0%, 100% { opacity: 0.25; }
+  0% { opacity: 0.25; }
   50% { opacity: 1; }
+  100% { opacity: 0.25; }
 }
 .animate-star-twinkle {
-  animation: star-twinkle 4s ease-in-out infinite;
+  animation-name: star-twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  will-change: opacity;
 }
 
-/* shooting stars */
+/* Shooting stars */
 @keyframes shooting {
   0% {
     transform: translate(-10vw, -10vh) rotate(215deg);
@@ -68,7 +72,6 @@ canvas {
     opacity: 0;
   }
 }
-
 .shooting-star {
   position: absolute;
   top: 20%;
@@ -79,10 +82,38 @@ canvas {
   border-radius: 999px;
   filter: drop-shadow(0 0 6px white);
   animation: shooting 8s linear infinite;
+  will-change: transform, opacity;
 }
-
 .shooting-star--alt {
   top: 60%;
   left: 70%;
   animation-delay: 3s;
+}
+
+/* Earth spins */
+@keyframes earth-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes earth-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+.animate-earth-spin {
+  animation: earth-spin 32s linear infinite;
+  transform-origin: 50% 50%;
+}
+.animate-earth-reverse {
+  animation: earth-reverse 48s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Slow ring orbit used around the planet */
+@keyframes orbit-slow {
+  from { transform: rotate(0deg) skewY(0deg); }
+  to   { transform: rotate(360deg) skewY(0deg); }
+}
+.animate-orbit-slow {
+  animation: orbit-slow 30s linear infinite;
+  transform-origin: center;
 }
