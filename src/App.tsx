@@ -1,25 +1,14 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+// App.tsx
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
-import ScrollToTop from "./components/ScrollToTop";
-import ScrollProgress from "./components/ScrollProgress";
+import ProjectsPage from "./projects";
+import Contact from "./components/Contact";
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      <ScrollProgress />
-      <Header />
-      <main className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Home />
-        <Projects />
-        <About />
-      </main>
-      <Footer />
-      <ScrollToTop />
+    <div className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+      <Home />
+      <ProjectsPage />
+      <Contact />
     </div>
   );
 }
-
-export default App;

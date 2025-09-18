@@ -1,4 +1,3 @@
-// src/components/ScrollProgress.tsx
 import { useEffect, useState } from "react";
 
 export default function ScrollProgress() {
@@ -19,7 +18,7 @@ export default function ScrollProgress() {
   return (
     <div className="fixed top-0 left-0 w-full h-1 z-[9999]">
       <div
-        className="h-full bg-blue-500 transition-all duration-150"
+        className="h-full bg-gradient-to-r from-green-400 via-yellow-300 to-green-400 transition-all duration-150"
         style={{ width: `${width}%` }}
       />
     </div>
