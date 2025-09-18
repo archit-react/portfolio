@@ -1,10 +1,10 @@
-# Archit Sharma — Front-End Developer Portfolio
+# Archit Sharma — Front-End Engineer Portfolio
 
 A modern, Gen Z-inspired front-end portfolio built with React, TypeScript, and Tailwind CSS. Designed to impress senior developers, recruiters, and tech giants in 2025 with its clean code, responsiveness, and professional UI/UX.
 
 ## Live Hosting
 
-live Portfolio: [https://portfolio-archit-three.vercel.app/](https://portfolio-archit-three.vercel.app/)
+live portfolio: [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)
 
 ## Features
 
@@ -55,6 +55,7 @@ Download or view the resume directly from the portfolio using the Resume button 
 
 ## Author
 
-Built by Archit Sharma  
-GitHub: [https://github.com/archit-react](https://github.com/archit-react)  
-LinkedIn: [https://www.linkedin.com/in/archit-react](https://www.linkedin.com/in/archit-react)
+**Archit Sharma**  
+Frontend Engineer · React · JavaScript
+
+[GitHub](https://github.com/archit-react) • [LinkedIn](https://linkedin.com/in/archit-react)
