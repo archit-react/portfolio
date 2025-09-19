@@ -61,7 +61,7 @@ function send(text: string) {
     ),
   },
   {
-    icon: "Code₹",
+    icon: "CodeZ",
     title: "AI Code Generator",
     description:
       "Prompt-to-component generator that outputs type-safe React + TS. Ships with copy and download actions.",
